@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #635985;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.application.OverviewController">
+   <left>
+      <VBox prefHeight="400.0" prefWidth="186.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="EarnBank">
+               <VBox.margin>
+                  <Insets left="20.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="51.0" />
+               </font>
+            </Text>
+            <Button fx:id="btn1" onAction="#openprehled" mnemonicParsing="false" prefHeight="48.0" prefWidth="130.0" style="-fx-background-color: linear-gradient(to bottom left, #f78361, #f54b64);" text="Overview">
+               <VBox.margin>
+                  <Insets bottom="-30.0" left="40.0" top="50.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btn2" onAction="#openprijem" mnemonicParsing="false" prefHeight="48.0" prefWidth="130.0" style="-fx-background-color: linear-gradient(to bottom left, #f78361, #f54b64);" text="Items">
+               <VBox.margin>
+                  <Insets bottom="-30.0" left="40.0" top="60.0" />
+               </VBox.margin></Button>
+            <Button fx:id="btn3" onAction="#opencalc" mnemonicParsing="false" prefHeight="48.0" prefWidth="130.0" style="-fx-background-color: linear-gradient(to bottom left, #f78361, #f54b64);" text="Calculator">
+               <VBox.margin>
+                  <Insets left="40.0" top="60.0" />
+               </VBox.margin></Button>
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane fx:id="contentArea" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+      <TableView fx:id="tableView" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="397.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="totalName" prefWidth="75.0" text="NAZEV" />
+          <TableColumn fx:id="totalIncome" prefWidth="75.0" text="CENA" />
+           <TableColumn fx:id="totalSaved" prefWidth="75.0" text="NASETRENO" />
+        </columns>
+         <BorderPane.margin>
+            <Insets right="43.0" top="100.0" />
+         </BorderPane.margin>
+      </TableView>
+      </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
